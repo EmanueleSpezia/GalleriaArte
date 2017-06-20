@@ -40,6 +40,10 @@ public class GalleriaController  {
 	}
 
 
+	//CASO D'USO 3: (CONSULTAZIONE)
+	
+	
+	
 	//UTENTE
 	@PostMapping("/ricercaQuadro")
 	public String getByTitolo(String titolo, 
@@ -155,12 +159,18 @@ public class GalleriaController  {
 	}
 
 
-	//ELIMINAZIONE
+	//CASO D'USO 2: (RIMOZIONE)
+	
+	
+	//RIMOZIONE
 	@PostMapping("/cancellaQuadro")
 	public void cancellaQuadro(Quadro quadro){
 		quadroservice.remove(quadro.getTitolo());
 	}
 
+	
+	//CASO D'USO 4: (AGGIORNAMENTO)
+	
 	//AGGIORNAMENTO QUADRO (MODIFICA)
 	@PostMapping("/modificaQuadro")
 	public String modificaQuadro(Quadro quadro, BindingResult bindingResult, Model model ){

@@ -27,6 +27,8 @@ public class QuadroService {
 		return this.quadroRepository.findAll();
 	}
 
+	
+	//CASO D'USO 4: (AGGIORNAMENTO)
 
 	//MODIFICA
 	@Transactional
@@ -35,7 +37,8 @@ public class QuadroService {
 				new Object[] { quadro.getTitolo(), quadro.getAnno(), quadro.getTecnica() });
 	}
 
-
+	
+	//CASO D'USO 1: (AGGIUNTA)
 
 
 	//INSERIMENTO
@@ -44,17 +47,23 @@ public class QuadroService {
 		this.quadroRepository.save(quadro);
 	}
 
+	
 	public Quadro findbyId(Long id) {
 		return this.quadroRepository.findOne(id);
 	}
 
 
+	
+	
 	//RICERCA SINGOLA
 	public Quadro findByTitolo(String titolo){
 		Quadro quadro = (Quadro) serviceSpring.queryForObject("select * from quadro where titolo = ?", new Object[] { titolo },new QuadroRowMapper());
 		return quadro;
 	}
 
+	
+	//CASO D'USO 2: (RIMOZIONE)
+	
 	
 	//RIMOZIONE
 	@Transactional

@@ -30,6 +30,9 @@ public class AutoreService {
 		return autore;
 	}
 
+	
+	//CASO D'USO 4: (AGGIORNAMENTO)
+	
 	//MODIFICA
 	@Transactional
 	public void update(Autore autore){
@@ -37,6 +40,9 @@ public class AutoreService {
 				new Object[] { autore.getNome(), autore.getCognome(), autore.getNazione() });
 	}
 
+	//CASO D'USO 1: (AGGIUNTA)
+	
+	
 	//INSERIMENTO
 	@Transactional
 	public void add(final Autore autore) {
@@ -47,6 +53,10 @@ public class AutoreService {
 	public Autore findbyId(Long id) {
 		return this.autoreRepository.findOne(id);
 	}
+	
+	
+	//CASO D'USO 2: (RIMOZIONE)
+	
 
 	//RIMOZIONE
 	@Transactional
