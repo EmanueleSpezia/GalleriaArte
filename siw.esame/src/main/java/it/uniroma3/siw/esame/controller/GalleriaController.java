@@ -11,11 +11,13 @@ import it.uniroma3.siw.esame.model.Quadro;
 import it.uniroma3.siw.esame.service.AutoreService;
 import it.uniroma3.siw.esame.service.QuadroService;
 
-
+//CLASSE CONTROLLER
 
 @Controller
 public class GalleriaController  {
 
+	
+	
 	@Autowired
 	private AutoreService autoreservice;
 
