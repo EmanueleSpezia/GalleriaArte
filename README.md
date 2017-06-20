@@ -1,3 +1,4 @@
 Spiegazione cartella siwEsame:
 
-siw.esame -> progetto per l'esame di SIW
+siw.esame -> Progetto per l'esame di SIW
+ClasDiagram -> Diagramma delle classi del progetto siw.esame
