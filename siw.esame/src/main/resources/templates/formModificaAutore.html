@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ricerca Quadro</title>
+    <link  rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+    <body>
+        <form action="#" th:action="@{/modificaAutore}" th:object="${autore}" method="post">
+            <div>
+                <div>
+                    <span th:text="#{label.nome}">Nome: </span>
+                    <span><input type="text" th:field="*{nome}" /></span>
+                    <span th:if="${#fields.hasErrors('nome')}" th:text="#{label.obbligatoio}">Error</span>
+                </div>
+                <div>
+                    <span th:text="#{label.cognome}">Cognome: </span>
+                    <span><input type="text" th:field="*{cognome}" /></span>
+                    <span th:if="${#fields.hasErrors('cognome')}" th:text="#{label.obbligatoio}">Error</span>
+                </div>
+                <div>
+                    <span th:text="#{label.nazione}">Nazione: </span>
+                    <span><input type="text" th:field="*{nazione}" /></span>
+                    <span th:if="${#fields.hasErrors('nazione')}" th:text="#{label.obbligatoio}">Error</span>
+                </div>
+                <div>
+                    <span th:text="#{label.nascita}">Data di nascita: </span>
+                    <span><input type="text" th:field="*{nascita}" /></span>
+                    <span th:if="${#fields.hasErrors('nascita')}" th:text="#{label.obbligatoio}">Error</span>
+                </div>
+                <div>
+                    <span th:text="#{label.morte}">Data di morte: </span>
+                    <span><input type="text" th:field="*{morte}" /></span>
+                </div>
+                <div>
+                    <span><button type="submit">Modifica autore</button></span>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Ricerca Quadro</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/static/css/style.css}" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form action="#" th:action="@{/aggiungiAutore}" th:object="${autore}"
+		method="post">
+		<div>
+			<div>
+				<span th:text="#{label.nome}">Name: </span> <span><input
+					type="text" th:field="*{nome}" /></span> <span
+					th:if="${#fields.hasErrors('nome')}"
+					th:text="#{label.obbligatorio}">Error</span>
+			</div>
+			<div>
+				<span th:text="#{label.cognome}">Cognome: </span> <span><input
+					type="text" th:field="*{nome}" /></span> <span
+					th:if="${#fields.hasErrors('cognome')}"
+					th:text="#{label.obbligatorio}">Error</span>
+			</div>
+			<div>
+				<span th:text="#{label.annoNascita}">Anno di nascita: </span> <span><input
+					type="text" th:field="*{annoNascita}" /></span> <span
+					th:if="${#fields.hasErrors('annoNascita')}"
+					th:text="#{label.obbligatorio}">Error</span>
+			</div>
+			<div>
+				<span th:text="#{label.nazione}">Nazione: </span> <span><input
+					type="text" th:field="*{nazione}" /></span> <span
+					th:if="${#fields.hasErrors('nazione')}"
+					th:text="#{label.obbligatorio}">Error</span>
+			</div>
+
+			<!-- DA DEFINIRE NASCITA E COME AGGIUNGERE QUADRI!!! -->
+
+			<div>
+				<span><button type="submit">Cerca</button></span>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

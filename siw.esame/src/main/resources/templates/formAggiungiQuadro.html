@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ricerca Quadro</title>
+	<link  rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+    <body>
+        <form action="#" th:action="@{/aggiungiQuadro}" th:object="${quadro}" method="post">
+            <div>
+                <div>
+                    <span th:text="#{label.titolo}">Titolo: </span>
+                    <span><input type="text" th:field="*{titolo}" /></span>
+                    <span th:if="${#fields.hasErrors('titolo')}" th:text="#{label.obbligatorio}">Error</span>
+                </div>
+                 <div>
+                    <span th:text="#{label.anno}">Anno: </span>
+                    <span><input type="text" th:field="*{anno}" /></span>
+                    <span th:if="${#fields.hasErrors('anno')}" th:text="#{label.obbligatorio}">Error</span>
+                </div>
+                 <div>
+                    <span th:text="#{label.tecnica}">Tecnica: </span>
+                    <span><input type="text" th:field="*{titolo}" /></span>
+                    <span th:if="${#fields.hasErrors('nome')}" th:text="#{label.obbligatorio}">Error</span>
+                </div>
+              
+              <!-- MANCA L'AUTORE!!!!! -->
+              
+                <div>
+                    <span><button type="submit">Aggiungi</button></span>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

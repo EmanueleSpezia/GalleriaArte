@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Ecco il quadro che hai scelto!</title>
+<link  rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}"/>
+</head>
+<body>
+	
+	
+	
+	
+	<div>
+    	<p th:text="'Titolo: ' + ${quadro.titolo}" />
+    </div>
+	<div>
+    	<p th:text="'Anno: ' + ${quadro.anno}" />
+    </div>
+	<div>
+    	<p th:text="'Tecnica: ' + ${quadro.tecnica}" />	
+    </div>
+    <div>
+    	<p th:text="'Autore: ' + ${quadro.autore}" />	
+    </div>
+    <div>
+     <p><a href="/formModificaQuadro">Modifica</a></p>
+    </div>
+    <div>
+     <form action="#" th:action="@{/cancellaQuadro}" th:object="${quadro}" method="post"></form>
+     <p><span><button type="submit">Elimina</button></span></p>
+    </div>
+
+</body>
+</html>

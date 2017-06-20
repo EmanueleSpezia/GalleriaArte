@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Ecco il quadro che hai scelto!</title>
+<link  rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}"/>
+</head>
+<body>
+	<div>
+    	<p th:text="'Titolo: ' + ${quadro.titolo}" />
+    </div>
+	<div>
+    	<p th:text="'Anno: ' + ${quadro.anno}" />
+    </div>
+	<div>
+    	<p th:text="'Tecnica: ' + ${quadro.tecnica}" />	
+    </div>
+    <div>
+    	<p th:text="'Autore: ' + ${quadro.autore}" />	
+    </div>
+    
+    <h1>Continua ricerca per:</h1>
+   <p><a href="/formRicercaAutore">Autore</a></p>
+   <p><a href="/formRicercaQuadro">Quadro</a></p>
+  
+  <h1>Oppure</h1>
+   <p><a href="/index">Pagina iniziale</a></p>
+   
+   
+</body>
+</html>

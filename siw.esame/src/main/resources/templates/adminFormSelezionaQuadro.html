@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Ricerca Quadro</title>
+<link  rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>
+		Ecco i quadri dell'autore
+		<th:text value="${autore.nome}" />
+		<th:text value="${autore.cognome}" />
+	</h1>
+
+	<table>
+		<th:block th:each="quadro : ${listaQuadri}">
+			<tr>
+				<td th:text="${quadro.titolo}">Titolo: </td>
+				<td th:text="${quadro.anno}">Anno:</td>
+			</tr>
+		</th:block>
+	</table>
+
+
+
+
+	<form action="#" th:action="@{/adminSelezionaQuadro}" th:object="${autore}"
+		method="post">
+		<div>
+			<div>
+				<span th:text="#{label.titolo}">Titolo: </span> <span><input
+					type="text" th:field="*{titolo}" /></span> <span
+					th:if="${#fields.hasErrors('titolo')}"
+					th:text="#{label.obbligatorio}">Error</span>
+			</div>
+			<div>
+				<span><button type="submit">Cerca</button></span>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

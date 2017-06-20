@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Ecco l'autore che hai aggiunto!</title>
+<link  rel="stylesheet" type="text/css" th:href="@{/static/css/style.css}"/>
+</head>
+<body>
+	<div>
+    	<p th:text="'Nome: ' + ${autore.nome}" />
+    </div>
+	<div>
+    	<p th:text="'Cognome: ' + ${autore.cognome}" />
+    </div>
+    <div>
+    	<p th:text="'Nazione: ' + ${autore.nazione}" />
+    </div>
+	<div>
+    	<p th:text="'Data di nascita: ' + ${autore.nascita}" />	
+    </div>
+    <div>
+    	<p th:text="'Data di morte: ' + ${quadro.morte}" />	
+    </div>
+
+</body>
+</html>
