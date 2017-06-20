@@ -1,4 +1,4 @@
-Spiegazione cartella siwEsame:
+Informazioni repository siwEsame:
 
 
 siw.esame -> Progetto per l'esame di SIW 
