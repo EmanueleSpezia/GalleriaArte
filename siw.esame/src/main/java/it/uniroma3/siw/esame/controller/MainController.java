@@ -5,10 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 // controller to access the login page
-*//**
- * @author emanuele
- *
- *//*
+
 @Controller
 public class MainController {
 
