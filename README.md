@@ -1,11 +1,9 @@
-Informazioni repository siwEsame:
+Progetto galleriaArte
 
+siw.esame -> Codice progetto 
+ClassDiagram -> Diagramma delle classi del progetto
 
-siw.esame -> Progetto per l'esame di SIW 
-
-ClassDiagram -> Diagramma delle classi del progetto siw.esame
-
-Casi d'uso:
+Casi d'uso implementati:
 
 1) Aggiunta
 
